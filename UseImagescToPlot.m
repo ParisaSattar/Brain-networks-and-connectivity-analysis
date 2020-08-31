@@ -1,0 +1,13 @@
+loc=find(h_fdr==1);
+NEWdata1=zeros(60,60);
+NEWdata2=zeros(60,60);
+NEWdata3=zeros(60,60);
+NEWdata1(loc)=MEANdata_t1t2_var1(loc);
+NEWdata2(loc)=MEANdata_t1t2_var2(loc);
+NEWdata3(loc)=deltamean(loc);
+figure
+imagesc(1:60,1:60,NEWdata1*100);
+figure
+imagesc(1:60,1:60,NEWdata2*100);
+figure
+imagesc(1:60,1:60,NEWdata3*100);
